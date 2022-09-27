@@ -73,6 +73,7 @@
           PUID: '1000'
           PGID: '1000'
           LC_ALL: 'C'
+          TZ: 'America/Los_Angeles'
 
     # MAIN DEPLOYMENT #############################################################
     - name: 'Deploying {{pgrole}}'
