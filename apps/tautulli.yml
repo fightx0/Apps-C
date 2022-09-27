@@ -57,7 +57,8 @@
       set_fact:
         pg_env:
           PUID: '1000'
-          PGID: '1000' 
+          PGID: '1000'
+          TZ: 'America/Los_Angeles'
     # MAIN DEPLOYMENT #############################################################
     - name: 'Deploying {{pgrole}}'
       docker_container:
