@@ -42,6 +42,11 @@
           traefik.frontend.headers.contentTypeNosniff: 'true'
           traefik.frontend.headers.customResponseHeaders: 'X-Robots-Tag:noindex,nofollow,nosnippet,noarchive,notranslate,noimageindex'
           traefik.frontend.headers.forceSTSHeader: 'true'
+          traefik.http.routers.sonarr-rtr-bypass.entrypoints: 'https'
+          traefik.http.routers.sonarr-rtr-bypass.rule: 'Headers:X-Api-Key,1212a0e9c5644422bf5ef577a6cd5288||Query:apikey,1212a0e9c5644422bf5ef577a6cd5288'
+          traefik.http.routers.sonarr-rtr-bypass.priority: '100'
+          traefik.http.routers.sonarr-rtr-bypass.middlewares: 'chain-no-auth@file'
+          traefik.http.routers.sonarr-rtr-bypass.service: 'sonarr-svc'
 
     - name: 'Setting {{pgrole}} Volumes'
       set_fact:
