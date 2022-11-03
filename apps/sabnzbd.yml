@@ -14,8 +14,8 @@
     - name: 'Set Known Facts'
       set_fact:
         pgrole: 'sabnzbd'
-        intport: '8088'
-        extport: '8088'
+        intport: '8081'
+        extport: '8081'
         image: 'linuxserver/sabnzbd:latest'
 
     # CORE (MANDATORY) ############################################################
